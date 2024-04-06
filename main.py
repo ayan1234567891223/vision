@@ -7,18 +7,19 @@ import numpy as np
 st.title('AI Vision')
 
 image_bin = st.file_uploader("Upload image files", )
+open_ai_key = st.text_input("OpenAI Key")
 
 def inimg(imagepath):
   # Function to encode the image
   def encode_image(image_path):
-      return base64.b64encode(image_bin.read()).decode('utf-8')
+    return base64.b64encode(image_bin.read()).decode('utf-8')
 
   # Getting the base64 string
   base64_image = encode_image(image_bin)
 
   headers = {
     "Content-Type": "application/json",
-    "Authorization": f"Bearer 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"
+    "Authorization": f"Bearer {open_ai_key}"
   }
 
   payload = {
