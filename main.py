@@ -45,7 +45,6 @@ def inimg(imagepath):
 
   response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=payload)
   st.write(response.json())
-  print(response)
 
 if image_bin is not None:
   inimg(image_bin)
