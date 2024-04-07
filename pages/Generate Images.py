@@ -13,7 +13,7 @@ def makeimage(prompt: str):
         "size": "1024x1024"
     })
     
-    image_url = response.data[0].url
+    image_url = response
     
     st.write(image_url)
 
