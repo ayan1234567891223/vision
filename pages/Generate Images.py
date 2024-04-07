@@ -15,10 +15,11 @@ def makeimage(prompt: str):
     
     image_url = response.data[0].url
     
-    st.image(image_url)
+    st.write(image_url)
 
 st.subheader("Generate Images Using AI")
 
 promptinput = st.text_input("Prompt")
+
 if promptinput:
     makeimage(prompt=promptinput)
