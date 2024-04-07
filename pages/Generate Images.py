@@ -5,7 +5,9 @@ st.subheader("Enter Your OpenAI Key To Use All The Features")
 
 open_ai_key = st.text_input("OpenAI Key (Press enter after putting your OpenAI API Key)")
 
-client = OpenAI(api_key=open_ai_key, organization="org-bghRR0Lowkz6U0iE0yxHIq0a")
+client = OpenAI()
+client.api_key = open_ai_key
+client.organization = "org-bghRR0Lowkz6U0iE0yxHIq0a"
 
 def makeimage(prompt: str):
     response = client.images.generate(
