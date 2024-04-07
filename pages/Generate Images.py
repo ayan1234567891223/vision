@@ -5,7 +5,6 @@ st.subheader("Enter Your OpenAI Key To Use All The Features")
 
 open_ai_key = st.text_input("OpenAI Key (Press enter after putting your OpenAI API Key)")
 
-
 def makeimage(prompt: str):
     response = requests.post("https://api.openai.com/v1/images/generations", headers={"Content-Type": "application/json", "Authorization": "Bearer " + open_ai_key}, json={
         "model": "dall-e-3",
