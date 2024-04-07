@@ -15,7 +15,7 @@ def makeimage(prompt: str):
     
     image_url = response
     
-    st.write(image_url)
+    st.write(image_url.json())
 
 st.subheader("Generate Images Using AI")
 
